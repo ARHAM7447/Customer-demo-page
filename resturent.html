@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Spice Haven – Where Tradition Meets Fusion | Luxury Indian Cuisine in Bhopal</title>
+    <meta name="description" content="Spice Haven: Premium Indian fusion restaurant in Bhopal, Madhya Pradesh. Elegant dining experience blending authentic Indian flavors with contemporary techniques."/>
+    <meta property="og:title" content="Spice Haven – Luxury Indian Fusion in Bhopal"/>
+    <meta property="og:description" content="Experience elevated Indian cuisine where tradition meets modern creativity in a sophisticated ambiance."/>
+    <meta property="og:image" content="https://archello.s3.eu-central-1.amazonaws.com/images/2020/08/22/comelite-architecture-structure-and-interior-design-naveena-modern-indian-restaurant-design-restaurants-archello.1598087893.9613.jpg"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        saffron: '#FF9933',
+                        maroon: '#800020',
+                        'dark-teal': '#004D40',
+                        cream: '#FDF5E6',
+                        gold: '#D4AF37',
+                        charcoal: '#1F2937',
+                        'soft-gray': '#F3F4F6',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <style>
+        .glass {
+            background: rgba(253, 245, 230, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(253, 245, 230, 0.4);
+        }
+        .dark .glass {
+            background: rgba(31, 41, 55, 0.65);
+            border: 1px solid rgba(31, 41, 55, 0.4);
+        }
+
+        .fade-in    { opacity:0; transform:translateY(20px); transition:opacity 0.7s ease-out, transform 0.7s ease-out; }
+        .fade-in.visible    { opacity:1; transform:translateY(0); }
+
+        .slide-up   { opacity:0; transform:translateY(60px); transition:opacity 0.9s ease-out, transform 0.9s ease-out; }
+        .slide-up.visible   { opacity:1; transform:translateY(0); }
+
+        .zoom-in    { opacity:0; transform:scale(0.92); transition:opacity 0.7s ease-out, transform 0.7s ease-out; }
+        .zoom-in.visible    { opacity:1; transform:scale(1); }
+
+        .card-hover:hover .card-img {
+            transform: scale(1.08);
+        }
+        .card-hover:hover .overlay {
+            opacity: 1;
+        }
+
+        .scroll-indicator {
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%,20%,50%,80%,100% { transform:translateY(0); }
+            40% { transform:translateY(-12px); }
+            60% { transform:translateY(-6px); }
+        }
+
+        body {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-cream text-maroon font-sans transition-colors duration-300 dark:bg-charcoal dark:text-soft-gray">
+
+    <!-- HEADER -->
+    <header id="header" class="sticky top-0 z-50 transition-all duration-300">
+        <nav class="glass shadow-md py-5 px-6 md:px-12 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3 text-3xl font-serif font-bold text-maroon dark:text-gold">
+                <svg class="w-9 h-9 text-saffron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                </svg>
+                <span>Spice Haven</span>
+            </a>
+<div class="hidden md:flex gap-4">
+
+<a href="haircutting.html"
+class="bg-gray-200 dark:bg-gray-800 px-5 py-2 rounded-lg hover:bg-gold hover:text-black transition">
+Haircutting
+</a>
+
+<a href="fitness.html"
+class="bg-gray-200 dark:bg-gray-800 px-5 py-2 rounded-lg hover:bg-gold hover:text-black transition">
+Fitness
+</a>
+
+<a href="resturent.html"
+class="bg-gray-200 dark:bg-gray-800 px-5 py-2 rounded-lg hover:bg-gold hover:text-black transition">
+Restaurant
+</a>
+
+</div>
+            <ul class="hidden md:flex space-x-8 text-lg font-medium">
+                <li><a href="#home"      class="hover:text-saffron transition-colors">Home</a></li>
+                <li><a href="#menu"      class="hover:text-saffron transition-colors">Menu</a></li>
+                <li><a href="#about"     class="hover:text-saffron transition-colors">About</a></li>
+                <li><a href="#contact"   class="hover:text-saffron transition-colors">Contact</a></li>
+            </ul>
+
+            <div class="flex items-center space-x-5">
+                <button id="theme-toggle" aria-label="Toggle dark mode" class="text-2xl">
+                    <span id="sun"  class="hidden dark:inline">☀️</span>
+                    <span id="moon" class="inline dark:hidden">🌙</span>
+                </button>
+                <button id="book-table" class="bg-gradient-to-r from-saffron to-gold text-white px-6 py-3 rounded-lg font-medium hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
+                    Reserve Table
+                </button>
+                <button id="mobile-menu-btn" class="md:hidden text-3xl">
+                    ☰
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="fixed inset-0 bg-charcoal/90 hidden z-40 transition-opacity duration-300">
+            <div class="fixed top-0 right-0 h-full w-4/5 bg-cream dark:bg-charcoal p-10 transform translate-x-full transition-transform duration-400">
+                <button id="close-mobile" class="absolute top-6 right-6 text-3xl">&times;</button>
+                <ul class="mt-16 space-y-8 text-2xl font-medium text-center">
+                    <li><a href="#home"    class="hover:text-saffron">Home</a></li>
+                    <li><a href="#menu"    class="hover:text-saffron">Menu</a></li>
+                    <li><a href="#about"   class="hover:text-saffron">About</a></li>
+                    <li><a href="#contact" class="hover:text-saffron">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <img src="https://archello.s3.eu-central-1.amazonaws.com/images/2020/08/22/comelite-architecture-structure-and-interior-design-naveena-modern-indian-restaurant-design-restaurants-archello.1598087893.9613.jpg" alt="Luxury Indian dining ambiance" class="absolute inset-0 w-full h-full object-cover" loading="lazy"/>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/70"></div>
+
+        <div class="relative z-10 text-center px-6 max-w-5xl">
+            <h1 class="text-5xl md:text-7xl font-serif font-bold text-white tracking-tight drop-shadow-2xl fade-in">
+                Where Tradition Meets Fusion
+            </h1>
+            <p class="text-2xl md:text-3xl font-serif text-gold mt-6 mb-10 fade-in delay-200">
+                Elevated Indian Cuisine in the Heart of Bhopal
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6 fade-in delay-300">
+                <a href="#menu" class="bg-saffron text-white px-8 py-4 rounded-lg font-medium text-lg hover:bg-maroon transition-all hover:shadow-2xl hover:-translate-y-1">
+                    Explore Menu
+                </a>
+                <button id="hero-reserve" class="border-2 border-gold text-gold px-8 py-4 rounded-lg font-medium text-lg hover:bg-gold hover:text-maroon transition-all hover:shadow-2xl hover:-translate-y-1">
+                    Reserve Now
+                </button>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white scroll-indicator">
+            <svg class="w-10 h-10 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-24 px-6 md:px-12 bg-soft-gray dark:bg-charcoal/40 slide-up">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <img src="https://i.ytimg.com/vi/yJ2Km1G_Z9Q/sddefault.jpg" alt="Chef preparing premium Indian dish" class="rounded-2xl shadow-2xl object-cover" loading="lazy"/>
+            </div>
+            <div>
+                <h2 class="text-5xl font-serif font-bold text-maroon dark:text-gold mb-8">A Culinary Journey</h2>
+                <p class="text-lg leading-relaxed mb-6">
+                    Spice Haven opened its doors in Bhopal in 2018 with a singular vision: to reimagine Indian cuisine through a contemporary lens while preserving its soul. Every dish tells a story — of heritage spices, seasonal ingredients, regional techniques, and global inspiration.
+                </p>
+                <p class="text-lg leading-relaxed mb-8">
+                    Under the creative direction of Chef Aarav Singh, our kitchen celebrates both time-honored classics and bold, unexpected fusions in an atmosphere of refined elegance and warm hospitality.
+                </p>
+                <div class="flex flex-wrap gap-6 text-xl font-medium text-saffron">
+                    <span>Since 2018</span>
+                    <span>•</span>
+                    <span>Signature Tastings</span>
+                    <span>•</span>
+                    <span>4.9 Experience</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU -->
+    <section id="menu" class="py-24 px-6 md:px-12 bg-cream dark:bg-charcoal zoom-in">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-5xl md:text-6xl font-serif font-bold text-center text-maroon dark:text-gold mb-12">Our Signature Offerings</h2>
+
+            <div class="flex flex-wrap justify-center gap-3 mb-10">
+                <button class="filter-btn px-6 py-3 rounded-full font-medium bg-maroon text-cream hover:bg-saffron transition-all active:scale-95" data-filter="all">All</button>
+                <button class="filter-btn px-6 py-3 rounded-full font-medium bg-soft-gray dark:bg-gray-700 hover:bg-saffron hover:text-white transition-all active:scale-95" data-filter="veg">Vegetarian</button>
+                <button class="filter-btn px-6 py-3 rounded-full font-medium bg-soft-gray dark:bg-gray-700 hover:bg-saffron hover:text-white transition-all active:scale-95" data-filter="nonveg">Non-Vegetarian</button>
+                <button class="filter-btn px-6 py-3 rounded-full font-medium bg-soft-gray dark:bg-gray-700 hover:bg-saffron hover:text-white transition-all active:scale-95" data-filter="signature">Signature</button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="menu-grid">
+                <div class="menu-item group relative rounded-2xl overflow-hidden shadow-xl bg-white dark:bg-gray-800 card-hover" data-type="veg signature">
+                    <div class="relative overflow-hidden aspect-[4/3]">
+                        <img src="https://www.thespicehouse.com/cdn/shop/articles/Skewers_720x.jpg?v=1655830158" alt="Truffle Paneer Tikka" class="card-img w-full h-full object-cover transition-transform duration-500" loading="lazy"/>
+                        <div class="overlay absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 transition-opacity duration-400 flex items-end p-6">
+                            <p class="text-white text-lg">Smoked paneer, black truffle, Kashmiri chili yogurt</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-serif font-bold mb-2">Truffle Paneer Tikka</h3>
+                        <p class="text-saffron font-medium text-xl">₹ 490</p>
+                        <button class="heart absolute top-4 right-4 text-3xl text-gray-300 hover:text-saffron active:scale-125 transition-all" aria-label="Add to favorites">♡</button>
+                    </div>
+                </div>
+                <div class="menu-item group relative rounded-2xl overflow-hidden shadow-xl bg-white dark:bg-gray-800 card-hover" data-type="nonveg">
+                    <div class="relative overflow-hidden aspect-[4/3]">
+                        <img src="https://www.allrecipes.com/thmb/8L5gq8V7Kyl3qfoDe5vhCU_rvZI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-141169-Easy-Indian-Butter-Chicken-DDMFS-4x3-beauty-588ff54d1e0f4a0788906e851e27d540.jpg" alt="Butter Chicken" class="card-img w-full h-full object-cover transition-transform duration-500" loading="lazy"/>
+                        <div class="overlay absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 transition-opacity duration-400 flex items-end p-6">
+                            <p class="text-white text-lg">Tender chicken in creamy tomato gravy, fenugreek aroma</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-serif font-bold mb-2">Butter Chicken</h3>
+                        <p class="text-saffron font-medium text-xl">₹ 580</p>
+                        <button class="heart absolute top-4 right-4 text-3xl text-gray-300 hover:text-saffron active:scale-125 transition-all" aria-label="Add to favorites">♡</button>
+                    </div>
+                </div>
+                <div class="menu-item group relative rounded-2xl overflow-hidden shadow-xl bg-white dark:bg-gray-800 card-hover" data-type="veg">
+                    <div class="relative overflow-hidden aspect-[4/3]">
+                        <img src="https://i.ytimg.com/vi/M7nvJN0vQ3g/sddefault.jpg" alt="Dal Makhani" class="card-img w-full h-full object-cover transition-transform duration-500" loading="lazy"/>
+                        <div class="overlay absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 transition-opacity duration-400 flex items-end p-6">
+                            <p class="text-white text-lg">Slow-cooked black lentils, butter, garlic tadka</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-serif font-bold mb-2">Dal Makhani</h3>
+                        <p class="text-saffron font-medium text-xl">₹ 420</p>
+                        <button class="heart absolute top-4 right-4 text-3xl text-gray-300 hover:text-saffron active:scale-125 transition-all" aria-label="Add to favorites">♡</button>
+                    </div>
+                </div>
+                <div class="menu-item group relative rounded-2xl overflow-hidden shadow-xl bg-white dark:bg-gray-800 card-hover" data-type="nonveg signature">
+                    <div class="relative overflow-hidden aspect-[4/3]">
+                        <img src="https://www.allrecipes.com/thmb/Fd6xzEJZWblLiR83vw_5Z20beaY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ALR-7485811-lamb-rogan-josh-recipe-VAT-4x3-76fc73d4bdc0442d9876fdcd30c0d43c.jpg" alt="Lamb Rogan Josh" class="card-img w-full h-full object-cover transition-transform duration-500" loading="lazy"/>
+                        <div class="overlay absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 transition-opacity duration-400 flex items-end p-6">
+                            <p class="text-white text-lg">Kashmiri lamb curry, fennel, yogurt, slow-braised</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-serif font-bold mb-2">Lamb Rogan Josh</h3>
+                        <p class="text-saffron font-medium text-xl">₹ 720</p>
+                        <button class="heart absolute top-4 right-4 text-3xl text-gray-300 hover:text-saffron active:scale-125 transition-all" aria-label="Add to favorites">♡</button>
+                    </div>
+                </div>
+                <div class="menu-item group relative rounded-2xl overflow-hidden shadow-xl bg-white dark:bg-gray-800 card-hover" data-type="veg">
+                    <div class="relative overflow-hidden aspect-[4/3]">
+                        <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2020/06/palak-paneer-recipe.jpg" alt="Palak Paneer" class="card-img w-full h-full object-cover transition-transform duration-500" loading="lazy"/>
+                        <div class="overlay absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 transition-opacity duration-400 flex items-end p-6">
+                            <p class="text-white text-lg">Spinach curry with cottage cheese, cumin tempering</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-serif font-bold mb-2">Palak Paneer</h3>
+                        <p class="text-saffron font-medium text-xl">₹ 480</p>
+                        <button class="heart absolute top-4 right-4 text-3xl text-gray-300 hover:text-saffron active:scale-125 transition-all" aria-label="Add to favorites">♡</button>
+                    </div>
+                </div>
+                <div class="menu-item group relative rounded-2xl overflow-hidden shadow-xl bg-white dark:bg-gray-800 card-hover" data-type="nonveg signature">
+                    <div class="relative overflow-hidden aspect-[4/3]">
+                        <img src="https://images.unsplash.com/photo-1621996346565-e3dbc353d2c5?w=800" alt="Tandoori Salmon" class="card-img w-full h-full object-cover transition-transform duration-500" loading="lazy"/>
+                        <div class="overlay absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 transition-opacity duration-400 flex items-end p-6">
+                            <p class="text-white text-lg">Spice-marinated salmon, clay oven, mint chutney</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-serif font-bold mb-2">Tandoori Salmon</h3>
+                        <p class="text-saffron font-medium text-xl">₹ 650</p>
+                        <button class="heart absolute top-4 right-4 text-3xl text-gray-300 hover:text-saffron active:scale-125 transition-all" aria-label="Add to favorites">♡</button>
+                    </div>
+                </div>
+                <div class="menu-item group relative rounded-2xl overflow-hidden shadow-xl bg-white dark:bg-gray-800 card-hover" data-type="veg signature">
+                    <div class="relative overflow-hidden aspect-[4/3]">
+                        <img src="https://www.cooking4allseasons.com/wp-content/uploads/2019/04/Quinoa-Biryani.jpg" alt="Quinoa Biryani" class="card-img w-full h-full object-cover transition-transform duration-500" loading="lazy"/>
+                        <div class="overlay absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 transition-opacity duration-400 flex items-end p-6">
+                            <p class="text-white text-lg">Quinoa infused saffron rice, nuts, fusion twist</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-serif font-bold mb-2">Quinoa Biryani</h3>
+                        <p class="text-saffron font-medium text-xl">₹ 550</p>
+                        <button class="heart absolute top-4 right-4 text-3xl text-gray-300 hover:text-saffron active:scale-125 transition-all" aria-label="Add to favorites">♡</button>
+                    </div>
+                </div>
+                <div class="menu-item group relative rounded-2xl overflow-hidden shadow-xl bg-white dark:bg-gray-800 card-hover" data-type="nonveg">
+                    <div class="relative overflow-hidden aspect-[4/3]">
+                        <img src="https://www.thespruceeats.com/thmb/XDBL9gA6A6nYWUdsRZ3QwH084rk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/SES-chicken-biryani-recipe-7367850-hero-A-ed211926bb0e4ca1be510695c15ce111.jpg" alt="Chicken Biryani" class="card-img w-full h-full object-cover transition-transform duration-500" loading="lazy"/>
+                        <div class="overlay absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 transition-opacity duration-400 flex items-end p-6">
+                            <p class="text-white text-lg">Hyderabadi-style, basmati, fried onions, raita</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-serif font-bold mb-2">Chicken Biryani</h3>
+                        <p class="text-saffron font-medium text-xl">₹ 620</p>
+                        <button class="heart absolute top-4 right-4 text-3xl text-gray-300 hover:text-saffron active:scale-125 transition-all" aria-label="Add to favorites">♡</button>
+                    </div>
+                </div>
+                <div class="menu-item group relative rounded-2xl overflow-hidden shadow-xl bg-white dark:bg-gray-800 card-hover" data-type="veg">
+                    <div class="relative overflow-hidden aspect-[4/3]">
+                        <img src="https://www.thecuriouschickpea.com/wp-content/uploads/2018/03/malaikofta-4-720x540.jpg" alt="Malai Kofta" class="card-img w-full h-full object-cover transition-transform duration-500" loading="lazy"/>
+                        <div class="overlay absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 transition-opacity duration-400 flex items-end p-6">
+                            <p class="text-white text-lg">Creamy vegetable dumplings in cashew gravy</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-serif font-bold mb-2">Malai Kofta</h3>
+                        <p class="text-saffron font-medium text-xl">₹ 510</p>
+                        <button class="heart absolute top-4 right-4 text-3xl text-gray-300 hover:text-saffron active:scale-125 transition-all" aria-label="Add to favorites">♡</button>
+                    </div>
+                </div>
+                <div class="menu-item group relative rounded-2xl overflow-hidden shadow-xl bg-white dark:bg-gray-800 card-hover" data-type="nonveg signature">
+                    <div class="relative overflow-hidden aspect-[4/3]">
+                        <img src="https://img.apmcdn.org/96219a1e93a60fca6684637ceaff6f1a62549cf5/normal/badf58-20210126-indian-fish-1000.jpg" alt="Seafood Curry" class="card-img w-full h-full object-cover transition-transform duration-500" loading="lazy"/>
+                        <div class="overlay absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 transition-opacity duration-400 flex items-end p-6">
+                            <p class="text-white text-lg">Goan-style prawns and fish, coconut, tamarind</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-serif font-bold mb-2">Seafood Curry</h3>
+                        <p class="text-saffron font-medium text-xl">₹ 680</p>
+                        <button class="heart absolute top-4 right-4 text-3xl text-gray-300 hover:text-saffron active:scale-125 transition-all" aria-label="Add to favorites">♡</button>
+                    </div>
+                </div>
+                <div class="menu-item group relative rounded-2xl overflow-hidden shadow-xl bg-white dark:bg-gray-800 card-hover" data-type="veg signature">
+                    <div class="relative overflow-hidden aspect-[4/3]">
+                        <img src="https://i.ytimg.com/vi/Rxv6x7Z9A-c/maxresdefault.jpg" alt="Gulab Jamun" class="card-img w-full h-full object-cover transition-transform duration-500" loading="lazy"/>
+                        <div class="overlay absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 transition-opacity duration-400 flex items-end p-6">
+                            <p class="text-white text-lg">Rose-infused milk dumplings, saffron syrup</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-serif font-bold mb-2">Gulab Jamun</h3>
+                        <p class="text-saffron font-medium text-xl">₹ 280</p>
+                        <button class="heart absolute top-4 right-4 text-3xl text-gray-300 hover:text-saffron active:scale-125 transition-all" aria-label="Add to favorites">♡</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESERVATION MODAL with confetti -->
+    <div id="reservation-modal" class="fixed inset-0 bg-black/70 hidden z-50 flex items-center justify-center">
+        <div class="glass p-10 rounded-2xl max-w-lg w-full relative overflow-hidden transform scale-95 transition-transform duration-300">
+            <button id="close-reservation" class="absolute top-6 right-6 text-3xl text-maroon dark:text-gold">&times;</button>
+            <h2 class="text-4xl font-serif font-bold text-maroon dark:text-gold mb-8 text-center">Reserve Your Table</h2>
+            <form id="reservation-form" class="space-y-5">
+                <input type="text" placeholder="Full Name" required class="w-full p-4 rounded-lg bg-white/40 dark:bg-gray-700 border border-saffron/30 focus:outline-none focus:border-saffron"/>
+                <input type="email" placeholder="Email" required class="w-full p-4 rounded-lg bg-white/40 dark:bg-gray-700 border border-saffron/30 focus:outline-none focus:border-saffron"/>
+                <input type="tel" placeholder="Phone (10 digits)" pattern="[0-9]{10}" required class="w-full p-4 rounded-lg bg-white/40 dark:bg-gray-700 border border-saffron/30 focus:outline-none focus:border-saffron"/>
+                <div class="grid grid-cols-2 gap-5">
+                    <input type="date" required min="2026-03-03" class="w-full p-4 rounded-lg bg-white/40 dark:bg-gray-700 border border-saffron/30"/>
+                    <select required class="w-full p-4 rounded-lg bg-white/40 dark:bg-gray-700 border border-saffron/30">
+                        <option value="">Preferred Time</option>
+                        <option>7:00 PM</option><option>7:30 PM</option><option>8:00 PM</option><option>8:30 PM</option><option>9:00 PM</option><option>9:30 PM</option><option>10:00 PM</option>
+                    </select>
+                </div>
+                <select required class="w-full p-4 rounded-lg bg-white/40 dark:bg-gray-700 border border-saffron/30">
+                    <option value="">Number of Guests</option>
+                    <option>1</option><option>2</option><option>3–4</option><option>5–6</option><option>7–8</option><option>9+</option>
+                </select>
+                <textarea placeholder="Special Requests / Occasion" rows="3" class="w-full p-4 rounded-lg bg-white/40 dark:bg-gray-700 border border-saffron/30"></textarea>
+                <button type="submit" class="w-full bg-gradient-to-r from-saffron to-gold text-white py-4 rounded-lg font-bold text-lg hover:shadow-2xl hover:-translate-y-1 transition-all">Confirm Reservation</button>
+            </form>
+            <p id="success-text" class="hidden text-center text-green-400 mt-6 text-xl font-medium">Reservation Confirmed • See you soon!</p>
+            <canvas id="confetti-canvas" class="absolute inset-0 pointer-events-none z-10"></canvas>
+        </div>
+    </div>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-24 px-6 md:px-12 bg-cream dark:bg-charcoal zoom-in">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-5xl font-serif font-bold text-maroon dark:text-gold mb-10">Visit Us</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <iframe class="w-full h-96 rounded-2xl shadow-2xl" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3666.0!2d77.40!3d23.26!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c428f8fd68fbd%3A0x2155716d1c88d4e3!2sBhopal%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1740940000000" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="flex flex-col justify-center text-left space-y-6 text-lg">
+                    <p><strong>Spice Haven</strong><br>123 Heritage Lane, Arera Colony<br>Bhopal, Madhya Pradesh</p>
+                    <p><strong>Reservations:</strong> +91 755 400 5678<br><strong>Email:</strong> reservations@spicehaven.in</p>
+                    <p><strong>Opening Hours</strong><br>Daily • 7:00 PM – 11:30 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-maroon text-cream py-12 text-center">
+        <p class="text-lg">© 2026 Spice Haven – Crafted with Passion & Tradition</p>
+    </footer>
+
+    <script>
+        // 1. Header shadow on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-2xl', 'bg-opacity-95');
+            } else {
+                header.classList.remove('shadow-2xl', 'bg-opacity-95');
+            }
+        });
+
+        // 2. Mobile menu
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobile = document.getElementById('close-mobile');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            setTimeout(() => mobileMenu.querySelector('div').classList.remove('translate-x-full'), 10);
+        });
+
+        closeMobile.addEventListener('click', () => {
+            mobileMenu.querySelector('div').classList.add('translate-x-full');
+            setTimeout(() => mobileMenu.classList.add('hidden'), 400);
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.querySelector('div').classList.add('translate-x-full');
+                setTimeout(() => mobileMenu.classList.add('hidden'), 400);
+            });
+        });
+
+        // 3. Dark mode
+        const themeToggle = document.getElementById('theme-toggle');
+        const sunIcon  = document.getElementById('sun');
+        const moonIcon = document.getElementById('moon');
+
+        if (localStorage.theme === 'dark' || 
+            (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            sunIcon.classList.remove('hidden');
+            moonIcon.classList.add('hidden');
+        } else {
+            sunIcon.classList.add('hidden');
+            moonIcon.classList.remove('hidden');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            if (document.documentElement.classList.contains('dark')) {
+                localStorage.theme = 'dark';
+                sunIcon.classList.remove('hidden');
+                moonIcon.classList.add('hidden');
+            } else {
+                localStorage.theme = 'light';
+                sunIcon.classList.add('hidden');
+                moonIcon.classList.remove('hidden');
+            }
+        });
+
+        // 4. Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.12 });
+
+        document.querySelectorAll('.fade-in, .slide-up, .zoom-in').forEach(el => observer.observe(el));
+
+        // 5. Menu filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const menuItems = document.querySelectorAll('.menu-item');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => {
+                    b.classList.remove('bg-maroon', 'text-cream');
+                    b.classList.add('bg-soft-gray', 'dark:bg-gray-700');
+                });
+                btn.classList.remove('bg-soft-gray', 'dark:bg-gray-700');
+                btn.classList.add('bg-maroon', 'text-cream');
+
+                const filterValue = btn.dataset.filter;
+
+                menuItems.forEach(item => {
+                    const types = item.dataset.type?.split(' ') || [];
+                    if (filterValue === 'all' || types.includes(filterValue)) {
+                        item.style.display = 'block';
+                        setTimeout(() => item.style.opacity = '1', 50);
+                    } else {
+                        item.style.opacity = '0';
+                        setTimeout(() => item.style.display = 'none', 300);
+                    }
+                });
+            });
+        });
+
+        // 6. Favorites
+        const hearts = document.querySelectorAll('.heart');
+        let favorites = JSON.parse(localStorage.getItem('spiceHavenFavorites')) || [];
+
+        hearts.forEach(heart => {
+            const itemName = heart.closest('.menu-item').querySelector('h3').textContent.trim();
+
+            if (favorites.includes(itemName)) {
+                heart.textContent = '♥';
+                heart.classList.add('text-maroon');
+            }
+
+            heart.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (favorites.includes(itemName)) {
+                    favorites = favorites.filter(f => f !== itemName);
+                    heart.textContent = '♡';
+                    heart.classList.remove('text-maroon');
+                } else {
+                    favorites.push(itemName);
+                    heart.textContent = '♥';
+                    heart.classList.add('text-maroon');
+                }
+                localStorage.setItem('spiceHavenFavorites', JSON.stringify(favorites));
+            });
+        });
+
+        // 7. Reservation modal + confetti
+        const modal = document.getElementById('reservation-modal');
+        const openTriggers = [document.getElementById('book-table'), document.getElementById('hero-reserve')];
+        const closeBtn = document.getElementById('close-reservation');
+        const successText = document.getElementById('success-text');
+        const confettiCanvas = document.getElementById('confetti-canvas');
+        const ctx = confettiCanvas?.getContext('2d');
+        const form = document.getElementById('reservation-form');
+
+        if (confettiCanvas) {
+            confettiCanvas.width = confettiCanvas.offsetWidth;
+            confettiCanvas.height = confettiCanvas.offsetHeight;
+            window.addEventListener('resize', () => {
+                confettiCanvas.width = confettiCanvas.offsetWidth;
+                confettiCanvas.height = confettiCanvas.offsetHeight;
+            });
+        }
+
+        function launchConfetti() {
+            if (!ctx) return;
+            const colors = ['#FF9933', '#800020', '#D4AF37', '#FFD700', '#FFFFFF', '#004D40'];
+            const particles = [];
+            const particleCount = 180;
+
+            for (let i = 0; i < particleCount; i++) {
+                particles.push({
+                    x: Math.random() * confettiCanvas.width,
+                    y: Math.random() * confettiCanvas.height - confettiCanvas.height,
+                    r: Math.random() * 5 + 2,
+                    d: Math.random() * 180 + 60,
+                    color: colors[Math.floor(Math.random() * colors.length)],
+                    tilt: Math.random() * 10 - 5,
+                    tiltAngle: Math.random() * Math.PI * 2,
+                    tiltAngleIncremental: (Math.random() * 0.08) - 0.04
+                });
+            }
+
+            function draw() {
+                ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+                particles.forEach((p, i) => {
+                    ctx.beginPath();
+                    ctx.lineWidth = p.r;
+                    ctx.strokeStyle = p.color;
+                    ctx.moveTo(p.x + p.tilt + p.r / 2, p.y);
+                    ctx.lineTo(p.x + p.tilt, p.y + p.tilt + p.r / 2);
+                    ctx.stroke();
+
+                    p.tiltAngle += p.tiltAngleIncremental;
+                    p.tilt = Math.sin(p.tiltAngle) * 15;
+                    p.y += (Math.cos(p.d) + 3 + p.r / 2) / 2;
+                    p.x += Math.sin(p.d) * 0.5;
+
+                    if (p.y > confettiCanvas.height) particles.splice(i, 1);
+                });
+
+                if (particles.length > 0) requestAnimationFrame(draw);
+            }
+            draw();
+        }
+
+        openTriggers.forEach(btn => {
+            if (btn) btn.addEventListener('click', () => {
+                modal.classList.remove('hidden');
+                successText.classList.add('hidden');
+                form.reset();
+            });
+        });
+
+        closeBtn.addEventListener('click', () => modal.classList.add('hidden'));
+        modal.addEventListener('click', e => { if (e.target === modal) modal.classList.add('hidden'); });
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            if (form.checkValidity()) {
+                successText.classList.remove('hidden');
+                launchConfetti();
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    successText.classList.add('hidden');
+                    form.reset();
+                    if (ctx) ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+                }, 3200);
+            } else {
+                form.reportValidity();
+            }
+        });
+
+        // 8. Smooth scroll for anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        // Initial scroll trigger
+        setTimeout(() => window.dispatchEvent(new Event('scroll')), 300);
+    </script>
+</body>
+</html>
